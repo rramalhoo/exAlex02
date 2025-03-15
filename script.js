@@ -1,9 +1,9 @@
 function calcularSalario() {
-    valorHoras = parseFloat(document.getElementById('horas').value)
-    horasTrabalhadas = parseFloat(document.getElementById('trabalhado').value)
+    var valorHoras = parseFloat(document.getElementById('horas').value)
+    var horasTrabalhadas = parseFloat(document.getElementById('trabalhado').value)
 
-    bruto = valorHoras * horasTrabalhadas
-    imposto
+    var bruto = valorHoras * horasTrabalhadas
+    var imposto
 
     if(bruto <= 5000){
         imposto = bruto * 0.15
@@ -11,8 +11,9 @@ function calcularSalario() {
         imposto = bruto * 0.22
     }
 
-    liquido = bruto - imposto
+    var liquido = bruto - imposto
 
-    resultado = document.getElementById("")
-
+    document.getElementById("respostaBruto").innerHTML = `Salário Bruto: R$ ${bruto.toFixed(2)}`
+    document.getElementById("respostaImposto").innerHTML = `Imposto: R$ ${imposto.toFixed(2)}`
+    document.getElementById("respostaLiquido").innerHTML = `Salário Líquido: R$ ${liquido.toFixed(2)}`
 }
